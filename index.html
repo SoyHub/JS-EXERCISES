@@ -10,14 +10,13 @@
     
 </head>
 <body>
-   <!-- <div class="container"> -->
     
     <h1>THE GUESSING GAME</h1>
     <form autocomplete="off" onsubmit="event.preventDefault();">
     <div id="main" class="main"> 
     <h1 id="title">Guess a number from 1 to 10 !</h1>
     <div class="flex">
-    <input id="inp" type="text" autofocus>
+    <input id="inp" type="text" autofocus maxlength="2">
      <div class="answer" id="ans">?</div>   
     </div>
      <button id="btn" type="submit" onclick = myFunction()>
@@ -25,6 +24,7 @@
      <button id="btn2" onclick=myFunction2()>
         Try again!</button>
     </div>
+    <footer>Made by SOHAYB</footer>
     </form>
     
     <script src="guessing-game.js"></script>
