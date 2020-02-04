@@ -88,11 +88,14 @@ input:focus{
     width: 50px;
     /* height: 35px; */
     background-color: white;
-    color: rgba(0, 0, 0, 0.233);
+    color: rgba(0, 0, 0, 0.452);
     
 
 }
 .flex{
     display: flex;
     justify-content: center;
+}
+#btn2{
+    display: none;
 }

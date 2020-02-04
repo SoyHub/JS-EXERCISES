@@ -13,15 +13,17 @@
    <!-- <div class="container"> -->
     
     <h1>THE GUESSING GAME</h1>
-    <form autocomplete="off" onsubmit="event.preventDefault(); myFunction()">
+    <form autocomplete="off" onsubmit="event.preventDefault();">
     <div id="main" class="main"> 
     <h1 id="title">Guess a number from 1 to 10 !</h1>
     <div class="flex">
     <input id="inp" type="text" autofocus>
-     <div class="answer" id="ans">N/A</div>   
+     <div class="answer" id="ans">?</div>   
     </div>
-     <button id="btn" type="submit">
+     <button id="btn" type="submit" onclick = myFunction()>
      GUESS!</button>
+     <button id="btn2" onclick=myFunction2()>
+        Try again!</button>
     </div>
     </form>
     
