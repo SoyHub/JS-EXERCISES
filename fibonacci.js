@@ -1,13 +1,18 @@
-function fibonacci(n) {
-  let first = 0
-  let second = 1
-  let fib = 1
-  while (fib <= n) {
-    fib = first + second
-    first = second
-    second = fib
-  }
-  return fib
-}
+let name;
+let surname;
+let pBirth;
+let sex;
+let prov;
 
-console.log(fibonacci(20))
+function submit (){
+name = document.getElementById("inp1").value;
+surname = document.getElementById("inp2").value;
+pBirth = document.getElementById("inp3").value;
+prov = document.getElementById("inp4").value;
+sex = document.getElementById("sex1").value;
+console.log(name);
+console.log(surname);
+console.log(pBirth);name
+console.log(prov);
+console.log(sex)
+}

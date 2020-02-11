@@ -367,3 +367,258 @@
 //     }
 //   console.log(str);
 // } 
+
+// // Prime detector that shows you the divisible
+// //numbers and tells you if the number is Prime or not
+
+function primeDetect(num) {
+    function decimalDetector(n) {
+        if (n % 1 > 0 && n % 1 < 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let x = 2;
+    let isPrime = false;
+
+    while (x < num) {
+
+        if (!decimalDetector(num / x)) {
+            console.log("Divisible by: " + num / x);
+            isPrime = true;
+        }
+        x++;
+
+    }
+
+    if (isPrime) {
+        console.log("So " + num + " is not Prime..");
+        return false;
+    } else {
+        console.log(num + " is Prime");
+        return true;
+    }
+}
+// primeDetect(55);
+
+//Prime printer is a function that prints all the prime numbers.
+//You only have to give it a start number and an end number.
+// function printPrime(start, end) {
+//     function decimalDetector(n) {
+//         if (n % 1 > 0 && n % 1 < 1) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
+
+//     function primeDetect(num) {
+//         let x = 2;
+//         let isPrime = false;
+
+//         while (x < num) {
+
+//             if (!decimalDetector(num / x)) {
+//                 isPrime = true;
+//             }
+//             x++;
+
+//         }
+
+//         if (isPrime) {
+//             return false;
+//         } else {
+//             return true;
+//         }
+//     }
+
+
+//     while (start < end) {
+//         if (primeDetect(start)) { console.log(start) }
+//         start++
+//     }
+// }
+// printPrime(20, 80);
+
+// //Exercise on switch case
+// let card = prompt("Enter the card:");
+// let value;
+
+// switch (card) {
+//     case 'A':
+//         value = 1;
+
+//         break;
+//     case 'J':
+//         value = 11;
+
+//         break;
+//     case 'Q':
+//         value = 12;
+
+//         break;
+//     case 'K':
+//         value = 13;
+//         break;
+//     default:
+//         isNaN(Number(card)) ?
+//             value = (card + " is not valid!")
+//             : value = (Number(card));
+
+// }
+
+// alert(value);
+
+////Flip image
+// document.getElementById('h1').innerHTML = "Wanna know the difference between<br>women driving and aliens?<br>look carefully at the photo below then click it!";
+// let it = false;
+
+// function click3() {
+//     document.getElementById('img').style = "transition: all 3s; transform: rotate(180deg);";
+
+//     if (it) {
+//         document.getElementById('h1').innerHTML = "ECCO!";
+//     } else {
+//         document.getElementById('h1').innerHTML = "HERE YOU GO!";
+//     }
+//     document.getElementById('button').style="display:none";
+// }
+
+// function click4() {
+//     document.getElementById('h1').innerHTML = "Vuoi sapere la differenza\ntra donne che guidono e alieni?\nguarda attentamente la foto qui sotto,\npoi fai clic!";
+//     it = true;
+//     document.getElementById('button').style="display:none";
+// }    
+
+/*
+
+**********
+*        *
+* Anton  *
+*        *
+*        *
+**********
+
+*/
+// //A function that puts a word inside a box of asterisks
+// //with a height and a width that you choose
+// //The manual width
+// function printBox(word, height, width) {
+//     const borders = 2;
+//     // let str = "*".repeat(word.length + 2 + width * 2);
+//     if (word.length + borders > width) {
+//         console.log("The word you entered is way bigger than the width!");
+//     } else if (height<3){
+//         console.log("The height is too low!\nIt can't be less than 3");
+//     }else {
+
+//         let str = "*".repeat(width);
+//         let wordn = "*" + " ".repeat(Math.ceil((width - word.length - borders) / 2)) + word + " ".repeat((width - word.length - borders) / 2) + "*"
+//         let spaces = "*" + " ".repeat(width - borders) + "*"
+
+//         console.log(str);
+
+
+
+//         for (let i = 0; i < height - borders; i++) {
+
+//             if (i == Math.floor(((height - borders) / 2) -1)) {
+//                 if (word.length < str.length) {
+//                     console.log(wordn);
+//                 }
+
+//             }
+//             else {
+//                 console.log(spaces);
+//             }
+
+//         }
+//         console.log(str);
+
+//     }
+
+// }
+
+
+////function (word, height, width)
+// printBox("s", 4, 4);
+
+//Exercise on switch with functions
+function rank(damage) {
+   let ranking;
+    switch (damage) {
+        case 1:
+            ranking = "Dull!";
+            break;
+        case 5:
+            ranking = "Cool!";
+            break;
+        case 10:
+            ranking = "Bravo!";
+            break;
+        case 15:
+            ranking = "Awesome!";
+            break;
+        case 20:
+            ranking = "Stylish!";
+            break;
+        default:
+            break;
+    }
+    return ranking;
+}
+
+
+//This function prints what the previous function returns.
+function printRank(damage) {
+    console.log(rank(damage));
+}
+
+
+// printRank(20);
+
+// primeDetect(918256645);
+
+
+//A function that puts a word inside a box of asterisks
+//with a height that you choose and center it
+//The width is calculated automatically
+function printBox(word, height) {
+    const borders = 2;
+    // let str = "*".repeat(word.length + 2 + width * 2);
+    if (height<3){
+        console.log("The height is too low!\nIt can't be less than 3");
+    }else {
+
+        let str = "*".repeat(word.length+4);
+        let wordn = "*" + " "+ word + " " + "*"
+        let spaces = "*" + " ".repeat((word.length+borders)) + "*"
+
+        console.log(str);
+
+
+
+        for (let i = 0; i < height - borders; i++) {
+
+            if (i == Math.floor(((height - borders) / 2) )) {
+                if (word.length < str.length) {
+                    console.log(wordn);
+                }
+
+            }
+            else {
+                console.log(spaces);
+            }
+
+        }
+        console.log(str);
+
+    }
+
+}
+
+
+////function (word, height, width)
+printBox("Ciaovhsdkljfdsjkfdskjlfhklsahklfklhsaghgg", 5);
