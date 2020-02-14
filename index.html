@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Codice Fiscale</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/10.png" type="image/x-icon">
+</head>
+<!-- 
+            surname
+            name
+            date of birth
+            place of birth
+            sex
+            provin (TO) 
+
+-->
+
+<body id="body">
+    <div id="main">
+        
+        
+        <div id="upper">
+
+            <div class="inps">
+                <!-- <label for="username">Name</label> -->
+                <input type="text" id="out1" maxlength="16" readonly required>
+            </div>
+
+            <div class="inps">
+                <!-- <label for="username">Name</label> -->
+                <input type="text" id="inp1" required>
+            </div>
+
+            <div class="inps">
+                <!-- <label for="name">Surname</label> -->
+                <input id="inp2" required>
+            </div>
+
+            <div class="inps">
+                <!-- <label for="name">Place of Birth</label> -->
+                <input id="inp3" required>
+            </div>
+
+            <div class="inps">
+                <!-- <label>Sex</label> -->
+                <select id="sex1">
+                    <option value="M" id="option1">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+
+            <div class="inps">
+                <!-- <label for="name">Provincia (</label> -->
+                <input  maxlength="2" id="inp4" required>
+                <!-- <label>)</label> -->
+            </div>
+
+            <div class="inps">
+                <input type="date" id="inp6" >
+            </div>
+
+        </div>
+
+        <button id="btn" type="submit" onclick="submit()">Calculate</button>
+        <button id="print" onclick="print2(); window.print();">Print</button>
+    </div>
+    <script src="script.js"></script>
+    <!-- <script src="Random.js"></script> -->
+</body>
+
+</html>
